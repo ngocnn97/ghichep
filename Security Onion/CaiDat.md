@@ -1,0 +1,22 @@
+#  Security Onion
+## Cài đặt 
+**Mô hình :**
+Triển khai Security Onion ở kiến trúc Standalone để thu thập và phân tích log từ 1 client: Ubuntu 20.04.
+Yêu cầu phần cứng:
+![Screenshot](/images/yeucauphancung.png)
+Mô hình triển khai:
+![Screenshot](/images/mohinhtrienkhai.png)
+1. Cài đặt Security Onion
+- Tải ISO tại địa chỉ: [https://download.securityonion.net/file/securityonion/securityonion-2.3.130-20220607.iso](https://download.securityonion.net/file/securityonion/securityonion-2.3.130-20220607.iso)
+- Tạo máy ảo mới trên hệ thống VMware Workstation Pro sử dụng image đã tải ở trên theo các bước trong tài liệu: https://docs.securityonion.net/en/2.3/vmware.html
+- Khởi động lại máy ảo và cấu hình theo kiến trúc Standalone với địa chỉ IP theo đúng **yêu cầu phần cứng**: https://docs.securityonion.net/en/2.3/first-time-users.html
+- Sau khi cấu hình xong và khởi động lại chay lệnh 
+`so-status` để kiểm tra tình trạng khởi động của các thành phần trong Security Onion:
+![Screenshot](/images/so-status.png)
+- Khi tất cả các container khởi động thành công, tiến hành truy cập giao diện GUI tại địa chỉ : https://192.168.189.128 và đăng nhập với email và mật khẩu đã cấu hình trước đó
+2. Cài đặt Ubuntu 20.04 
+- Tải ISO Ubuntu 20.04 tại địa chỉ:
+https://ubuntu.com/download/desktop
+- Tạo máy ảo mới đúng với **yêu cầu phần cứng** trên hệ thống VMware Workstation Pro sử dụng image đã tải ở trên
+
+
