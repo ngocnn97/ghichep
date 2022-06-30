@@ -136,7 +136,7 @@ Adding 192.168.189.150 to the wazuh_agent role. This can take a few seconds...
 ```
 - Kiểm tra lại kết nối tới User với ID: 002 
 ```sh
-]# docker exec -u 0 -it so-wazuh /var/ossec/bin/agent_control -l
+# docker exec -u 0 -it so-wazuh /var/ossec/bin/agent_control -l
 
 Wazuh agent_control. List of available agents:
    ID: 000, Name: securityonion-wazuh-manager (server), IP: 127.0.0.1, Active/Local
