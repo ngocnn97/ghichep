@@ -96,3 +96,20 @@ MDAyIHVzZXIgMTkyLjE2OC4xODkuMTUwIGI4NmJiYzg5MTdiZTVlNjcwMWQ2ZjAxZDhkYTdkMDI5NWM0
 ```
 
  - Exit với `Q`
+
+- Chỉnh sửa IP của server Manager tại file `/var/ossec/etc/ossec.conf` : 
+```sh
+<client>
+      <server-ip>192.168.189.150</server-ip>
+</client>
+```
+
+ - Khởi động agent :
+```sh
+#  systemctl enable wazuh-agent
+#  systemctl start wazuh-agent
+```
+- Kiểm tra tiến trình wazuh-agnet
+```sh
+#  systemctl status wazuh-agent
+```
