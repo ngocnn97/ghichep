@@ -113,3 +113,37 @@ MDAyIHVzZXIgMTkyLjE2OC4xODkuMTUwIGI4NmJiYzg5MTdiZTVlNjcwMWQ2ZjAxZDhkYTdkMDI5NWM0
 ```sh
 #  systemctl status wazuh-agent
 ```
+
+## Kết nối agent
+
+**Trên Manager server** : 
+- kiểm tra thông tin kết nối của tất cả các agent:
+```sh
+# docker exec -u 0 -it so-wazuh /var/ossec/bin/agent_control -l
+
+Wazuh agent_control. List of available agents:
+   ID: 000, Name: securityonion-wazuh-manager (server), IP: 127.0.0.1, Active/Local
+   ID: 001, Name: securityonion, IP: 192.168.189.128, Active
+   ID: 002, Name: user, IP: 192.168.189.150, Never connected
+
+List of agentless devices:
+```
+User với ID: 002 hiện đang không kết nối do chưa mở luật
+- Để mở kết nối cho User tại địa chỉ IP 192.168.189.150:
+```sh
+# so-allow -w -i 192.168.189.150
+Adding 192.168.189.150 to the wazuh_agent role. This can take a few seconds...
+```
+- Kiểm tra lại kết nối tới User với ID: 002 
+```sh
+]# docker exec -u 0 -it so-wazuh /var/ossec/bin/agent_control -l
+
+Wazuh agent_control. List of available agents:
+   ID: 000, Name: securityonion-wazuh-manager (server), IP: 127.0.0.1, Active/Local
+   ID: 001, Name: securityonion, IP: 192.168.189.128, Active
+   ID: 002, Name: user, IP: 192.168.189.150, Active
+
+List of agentless devices:
+
+```
+User với ID:002 đã chuyển trạng thái từ Nerver connected --> Active
