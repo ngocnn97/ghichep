@@ -1,9 +1,11 @@
 #  Security Onion
 ## Cài đặt 
 **Mô hình :**
-Triển khai Security Onion ở kiến trúc Standalone để thu thập và phân tích log từ 1 client: Ubuntu 20.04.
+Triển khai Security Onion ở kiến trúc Standalone để thu thập và phân tích log từ 1 client: Ubuntu 20.04
+
 Yêu cầu phần cứng:
 ![Screenshot](/images/yeucauphancung.png)
+
 Mô hình triển khai:
 ![Screenshot](/images/mohinhtrienkhai.png)
 1. Cài đặt Security Onion
