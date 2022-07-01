@@ -147,3 +147,72 @@ List of agentless devices:
 
 ```
 User với ID:002 đã chuyển trạng thái từ Nerver connected --> Active
+
+## Tuning Rules
+Để tuning rule của Wazuh có 2 phần:
+**Decoder**
+Bộ giải mã của wazuh trích xuất thông tin các dòng log thành các block để chuẩn bị cho các bước tiếp theo:
+Tham khảo: [Wazuh_decoder_syntax](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/decoders.html#decoder)
+**Rule**
+Bộ quy tắc Wazuh sử dụng các block đã được decoder trích xuất ra và áp dụng thêm các tham số như tần suất, đối chiếu,... để đưa ra cảnh báo thích hợp:
+Tham khảo [Wazuh_rules_syntax](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html#rule)
+
+> Để thử nghiệm các decoder hoặc rules tự tạo trên Security Onion chạy lệnh: ***sudo docker exec -it so-wazuh /var/ossec/bin/ossec-logtest*** và paste dòng log cần phân tích.
+
+**Thêm Rules trên Security Onion**
+Thêm các Rules tự tạo trên Security Onion tại đường dẫn :
+```
+   /opt/so/rules/hids/local_rules.xml
+```
+1. Thêm 1 Rule mới dựa trên rule đã có:
+   - Tìm rule đã có trong thư mục: 
+   ```
+      /opt/so/rules/hids/ruleset/rules/
+   ```
+   - Tạo Rule mới và đặt trong block \<group>  \</group> 
+   - Đổi ID và thêm các tham số cần thiết 
+   - Cuối cùng khởi động lại Wazuh :
+   ```sh
+      # sudo  so-wazuh-restart
+   ```
+   *Ví dụ:*
+   ```sh
+      <group name="local,syslog,sshd,">
+        <rule id="66656" level="10" frequency="5" timeframe="120">
+          <if_matched_sid>5710</if_matched_sid>
+          <description>sshd: Mutil f*cking atempt to login using a non-existent user</description>
+        </rule>
+      </group>
+
+   ```
+   *Giải thích:*
+   - Thêm luật mới với id=66656 dựa trên luật có sẵn với id=5710 với tần suất 5 lần trong 120s thì sẽ đặt cảnh báo ở mức level=10 và xuất cảnh báo: Mutil f*cking atempt to login using a non-existent user
+2. Thêm 1 Rule mới ghi đè lên rule đã có:
+   - Tìm rule đã có trong thư mục: 
+   ```
+      /opt/so/rules/hids/ruleset/rules/
+   ```
+   - Copy Rule cần ghi đè vào file:
+   ```
+      /opt/so/rules/hids/local_rules.xml
+   ```
+   - Đặt Rule vào trong block \<group>  \</group> 
+   - Cập nhật lại Rule theo mong muốn và thêm tag **overwrite="yes"** trong \<rule>
+   - Cuối cùng khởi động lại Wazuh :
+   ```sh
+      # sudo  so-wazuh-restart
+   ```
+   *Ví dụ:*
+   ```sh
+      <group name="local,syslog,sshd,">
+        <rule id="5710" level="7" overwrite="yes">
+          <if_matched_sid>5710</if_matched_sid>
+          <match>Admin</match>
+          <srcip>192.168.189.150</srcip>
+          <description>sshd: Attack to user Admin</description>
+        </rule>
+      </group>
+   ```
+   *Giải thích:*
+   - Lấy ví dụ user Admin chỉ 1 người duy nhất được phép đăng nhập, tất cả các đăng nhập khác vào server 192.168.189.150 bằng tài khoản admin đều được coi là tấn công. 
+   - Wazuh đã có luật id=5710 để phân tích các hành động đăng nhập sai password nhưng với tất cả mọi người dùng, ta sẽ tiến hành ghi đè thêm một số thông tin vào luật 5710 của wazuh để chỉ bắt sự kiện tài khoản admin của server 192.168.189.150 bị tấn công và tạo cảnh báo.
