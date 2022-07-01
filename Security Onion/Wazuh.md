@@ -153,11 +153,11 @@ User với ID:002 đã chuyển trạng thái từ Nerver connected --> Active
 
 **Decoder**
 Bộ giải mã của wazuh trích xuất thông tin các dòng log thành các block để chuẩn bị cho các bước tiếp theo:
-Tham khảo: [Wazuh_decoder_syntax](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/decoders.html#decoder)
+[Wazuh_decoder_syntax](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/decoders.html#decoder)
 
 **Rule**
 Bộ quy tắc Wazuh sử dụng các block đã được decoder trích xuất ra và áp dụng thêm các tham số như tần suất, đối chiếu,... để đưa ra cảnh báo thích hợp:
-Tham khảo [Wazuh_rules_syntax](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html#rule)
+[Wazuh_rules_syntax](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html#rule)
 
 > Để thử nghiệm các decoder hoặc rules tự tạo trên Security Onion chạy lệnh: ***sudo docker exec -it so-wazuh /var/ossec/bin/ossec-logtest*** và paste dòng log cần phân tích.
 
