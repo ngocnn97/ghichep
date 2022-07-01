@@ -219,3 +219,22 @@ Thêm các Rules tự tạo trên Security Onion tại đường dẫn :
 ![Canhbao2](/images/canhbao2.png)
 
 ## Gửi mail cảnh báo
+Để gửi mail cảnh bác cáo sự kiện Wazuh, chỉnh sửa file: ***/opt/so/conf/wazuh/ossec.conf***:
+```
+<global>
+   <email_notification>yes</email_notification>
+   <email_to>{địa_chỉ_email_đích}</email_to>
+   <smtp_server>{địa_chỉ_máy_chủ_SMTP}</smtp_server>
+   <email_from>{địa_chỉ_email_nguồn}</email_from>
+   <email_maxperhour>{số_email_tối_đa_trong_1_giờ}</email_maxperhour>
+</global>
+<alerts>
+    <log_alert_level>1</log_alert_level>
+    <email_alert_level>{cấp_độ_rule}</email_alert_level>
+  </alerts>
+
+```
+- Cấp độ Rule được cấu hình khi tạo Rules ở bước trên và được quy định tại [Rules Classification](https://www.ossec.net/docs/manual/rules-decoders/rule-levels.html)
+- Wazuh không xử lý xác thực SMTP. Nếu dịch vụ email sử dụng điều này, cần phải định cấu hình chuyển tiếp máy chủ, tham khảo: [   SMTP server with authentication](https://documentation.wazuh.com/current/user-manual/manager/manual-email-report/smtp-authentication.html#smtp-authentication)
+
+Ví dụ 1 mail gửi khi gặp sự kiện có level=10: ![Mail](/images/mail.png)
