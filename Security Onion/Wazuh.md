@@ -150,9 +150,11 @@ User với ID:002 đã chuyển trạng thái từ Nerver connected --> Active
 
 ## Tuning Rules
 Để tuning rule của Wazuh có 2 phần:
+
 **Decoder**
 Bộ giải mã của wazuh trích xuất thông tin các dòng log thành các block để chuẩn bị cho các bước tiếp theo:
 Tham khảo: [Wazuh_decoder_syntax](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/decoders.html#decoder)
+
 **Rule**
 Bộ quy tắc Wazuh sử dụng các block đã được decoder trích xuất ra và áp dụng thêm các tham số như tần suất, đối chiếu,... để đưa ra cảnh báo thích hợp:
 Tham khảo [Wazuh_rules_syntax](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html#rule)
