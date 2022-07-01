@@ -209,12 +209,13 @@ Thêm các Rules tự tạo trên Security Onion tại đường dẫn :
         <rule id="5710" level="7" overwrite="yes">
           <if_matched_sid>5710</if_matched_sid>
           <match>Admin</match>
-          <srcip>192.168.189.150</srcip>
-          <description>sshd: Attack to user Admin</description>
+          <description>sshd: Attack to user Admin from $(srcip)</description>
         </rule>
       </group>
    ```
    *Giải thích:*
-   - Lấy ví dụ user Admin chỉ 1 người duy nhất được phép đăng nhập, tất cả các đăng nhập khác vào server 192.168.189.150 bằng tài khoản admin đều được coi là tấn công. 
-   - Wazuh đã có luật id=5710 để phân tích các hành động đăng nhập sai password nhưng với tất cả mọi người dùng, ta sẽ tiến hành ghi đè thêm một số thông tin vào luật 5710 của wazuh để chỉ bắt sự kiện tài khoản admin của server 192.168.189.150 bị tấn công và tạo cảnh báo.
-   ![Canhbao2](/images/canhbao2.png)
+   - Lấy ví dụ user Admin chỉ 1 người duy nhất được phép đăng nhập, tất cả các đăng nhập khác vào server bằng tài khoản Admin đều được coi là tấn công. 
+   - Wazuh đã có luật id=5710 để phân tích các hành động đăng nhập sai password nhưng với tất cả mọi người dùng, ta sẽ tiến hành ghi đè thêm một số thông tin vào luật 5710 của wazuh để chỉ bắt sự kiện tài khoản admin của server bị đăng nhập sai và cảnh báo IP đang cố đăng nhập.
+![Canhbao2](/images/canhbao2.png)
+
+## Gửi mail cảnh báo
