@@ -187,6 +187,7 @@ Thêm các Rules tự tạo trên Security Onion tại đường dẫn :
    ```
    *Giải thích:*
    - Thêm luật mới với id=66656 dựa trên luật có sẵn với id=5710 với tần suất 5 lần trong 120s thì sẽ đặt cảnh báo ở mức level=10 và xuất cảnh báo: Mutil f*cking atempt to login using a non-existent user
+   ![Canhbao1](/images/canhbao1.png)
 2. Thêm 1 Rule mới ghi đè lên rule đã có:
    - Tìm rule đã có trong thư mục: 
    ```
@@ -216,3 +217,4 @@ Thêm các Rules tự tạo trên Security Onion tại đường dẫn :
    *Giải thích:*
    - Lấy ví dụ user Admin chỉ 1 người duy nhất được phép đăng nhập, tất cả các đăng nhập khác vào server 192.168.189.150 bằng tài khoản admin đều được coi là tấn công. 
    - Wazuh đã có luật id=5710 để phân tích các hành động đăng nhập sai password nhưng với tất cả mọi người dùng, ta sẽ tiến hành ghi đè thêm một số thông tin vào luật 5710 của wazuh để chỉ bắt sự kiện tài khoản admin của server 192.168.189.150 bị tấn công và tạo cảnh báo.
+   ![Canhbao2](/images/canhbao2.png)
