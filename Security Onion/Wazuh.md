@@ -236,6 +236,20 @@ Thêm các Rules tự tạo trên Security Onion tại đường dẫn :
   </alerts>
 
 ```
+****Ví dụ:***
+```
+<global>
+   <email_notification>yes</email_notification>
+   <email_to>nguyenngockma97@gmail.com</email_to>
+   <smtp_server>192.168.189.128</smtp_server>
+   <email_from>hobatendao4@gmail.com</email_from>
+   <email_maxperhour>1000</email_maxperhour>
+</global>
+<alerts>
+    <log_alert_level>1</log_alert_level>
+    <email_alert_level>10</email_alert_level>
+  </alerts>
+```
 - Cấp độ Rule được cấu hình khi tạo Rules ở bước trên và được quy định tại [Rules Classification](https://www.ossec.net/docs/manual/rules-decoders/rule-levels.html)
 - Wazuh không xử lý xác thực SMTP. Nếu dịch vụ email sử dụng điều này, cần phải định cấu hình chuyển tiếp máy chủ, tham khảo: [SMTP server with authentication](https://documentation.wazuh.com/current/user-manual/manager/manual-email-report/smtp-authentication.html#smtp-authentication)
 
