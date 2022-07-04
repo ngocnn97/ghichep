@@ -159,7 +159,7 @@ Bộ giải mã của wazuh trích xuất thông tin các dòng log thành các 
 Bộ quy tắc Wazuh sử dụng các block đã được decoder trích xuất ra và áp dụng thêm các tham số như tần suất, đối chiếu,... để đưa ra cảnh báo thích hợp:
 [Wazuh_rules_syntax](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html#rule)
 
-> Để thử nghiệm các decoder hoặc rules tự tạo trên Security Onion chạy lệnh: ***sudo docker exec -it so-wazuh /var/ossec/bin/ossec-logtest*** và paste dòng log cần phân tích.
+> Để thử nghiệm các decoder hoặc rules tự tạo trên Security Onion chạy lệnh: `sudo docker exec -it so-wazuh /var/ossec/bin/ossec-logtest` và paste dòng log cần phân tích.
 
 **Thêm Rules trên Security Onion**
 Thêm các Rules tự tạo trên Security Onion tại đường dẫn :
@@ -237,6 +237,6 @@ Thêm các Rules tự tạo trên Security Onion tại đường dẫn :
 
 ```
 - Cấp độ Rule được cấu hình khi tạo Rules ở bước trên và được quy định tại [Rules Classification](https://www.ossec.net/docs/manual/rules-decoders/rule-levels.html)
-- Wazuh không xử lý xác thực SMTP. Nếu dịch vụ email sử dụng điều này, cần phải định cấu hình chuyển tiếp máy chủ, tham khảo: [   SMTP server with authentication](https://documentation.wazuh.com/current/user-manual/manager/manual-email-report/smtp-authentication.html#smtp-authentication)
+- Wazuh không xử lý xác thực SMTP. Nếu dịch vụ email sử dụng điều này, cần phải định cấu hình chuyển tiếp máy chủ, tham khảo: [SMTP server with authentication](https://documentation.wazuh.com/current/user-manual/manager/manual-email-report/smtp-authentication.html#smtp-authentication)
 
 Ví dụ 1 mail gửi khi gặp sự kiện có level=10: ![Mail](/images/mail.png)
