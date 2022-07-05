@@ -1,5 +1,7 @@
 #  Security Onion
 ## Cài đặt 
+### WMware Workstation
+
 **Mô hình :**
 Triển khai Security Onion ở kiến trúc Standalone để thu thập và phân tích log từ 1 client: Ubuntu 20.04
 
@@ -8,9 +10,21 @@ Yêu cầu phần cứng:
 
 Mô hình triển khai:
 ![Screenshot](/images/mohinhtrienkhai.png)
+
+### VMware ESXi
+
+**Mô hình :**
+Triển khai Security Onion ở kiến trúc Standalone để thu thập và phân tích log từ 2 client: Ubuntu 20.04, Win 10 pro
+
+Yêu cầu phần cứng:
+![Screenshot](/images/yeucauphancungESXi.png)
+
+Mô hình triển khai:
+![Screenshot](/images/mohinhtrienkhaiESXi.png)
+
 1. Cài đặt Security Onion
 - Tải ISO tại địa chỉ: [https://download.securityonion.net/file/securityonion/securityonion-2.3.130-20220607.iso](https://download.securityonion.net/file/securityonion/securityonion-2.3.130-20220607.iso)
-- Tạo máy ảo mới trên hệ thống VMware Workstation Pro sử dụng image đã tải ở trên theo các bước trong tài liệu: https://docs.securityonion.net/en/2.3/vmware.html
+- Tạo máy ảo mới trên hệ thống VMware Workstation/ESXi sử dụng image đã tải ở trên theo các bước trong tài liệu: https://docs.securityonion.net/en/2.3/vmware.html
 - Khởi động lại máy ảo và cấu hình theo kiến trúc Standalone với địa chỉ IP theo đúng **yêu cầu phần cứng**: https://docs.securityonion.net/en/2.3/first-time-users.html
 - Sau khi cấu hình xong và khởi động lại chay lệnh 
 `so-status` để kiểm tra tình trạng khởi động của các thành phần trong Security Onion:
@@ -19,6 +33,6 @@ Mô hình triển khai:
 2. Cài đặt Ubuntu 20.04 
 - Tải ISO Ubuntu 20.04 tại địa chỉ:
 https://ubuntu.com/download/desktop
-- Tạo máy ảo mới đúng với **yêu cầu phần cứng** trên hệ thống VMware Workstation Pro sử dụng image đã tải ở trên
+- Tạo máy ảo mới đúng với **yêu cầu phần cứng** trên hệ thống VMware Workstation/ESXi sử dụng image đã tải ở trên
 
 
