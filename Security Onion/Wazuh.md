@@ -307,7 +307,11 @@ sudo so-wazuh-restart
 relayhost = [smtp.gmail.com]:587
 smtp_sasl_auth_enable = yes
 smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
-smtp_sasl_security_options
+smtp_sasl_security_options =
 smtp_tls_CAfile = /etc/ssl/certs/ca-bundle.crt
 smtp_use_tls = yes
+mynetworks = 0.0.0.0/0, 127.0.0.0/8
+#mynetworks = all
+inet_protocols = ipv4
+
 ```
