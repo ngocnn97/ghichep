@@ -1,4 +1,7 @@
 # Wazuh
+
+Wazuh là mội giải pháp HIDS mã nguồn mở, Wazuh khởi đầu từ một nhánh nhỏ của OSSEC, từ năm 2015 Wazuh tách ra khỏi ossec và phát triển độc lập. Wazuh kế thừa đầy đủ các tính năng của OSSEC như phân tích nhật ký, kiểm tra tính toàn vẹn của tệp, phát hiện rootkit,... ngoài ra Wazuh đã được cải tiến để nâng cao hiệu suất, luôn được cập nhật các mẫu chữ ký, các phương pháp phát hiện liên tục. [Wazuh form OSSEC](https://documentation.wazuh.com/current/migration-guide/migrating-from-ossec/)
+
 ## Cấu hình Wazuh agent 
 ### Cài đặt Wazuh Agent trên hệ điều hành Debian/Ubuntu
 

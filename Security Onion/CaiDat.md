@@ -1,4 +1,7 @@
 #  Security Onion
+
+Security Onion là một bản phân phối Linux mã nguồn mở, tập hợp các công cụ như Wazuh, Zeek, Suricata, CyberChef... để tìm kiếm mối đe dọa, giám sát an ninh mạng và giám sát nhật ký của một hệ thống mạng.
+
 ## Cài đặt 
 ### WMware Workstation
 
