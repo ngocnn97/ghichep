@@ -295,3 +295,19 @@ Thêm các Rules tự tạo trên Security Onion tại đường dẫn :
 - Wazuh không xử lý xác thực SMTP. Nếu dịch vụ email sử dụng điều này, cần phải định cấu hình chuyển tiếp máy chủ, tham khảo: [SMTP server with authentication](https://documentation.wazuh.com/current/user-manual/manager/manual-email-report/smtp-authentication.html#smtp-authentication)
 
 Ví dụ 1 mail gửi khi gặp sự kiện có level=10: ![Mail](/images/mail.png)
+
+Sau khi cấu hình xong khởi động lại dịch vụ wazuh:
+```sh
+sudo so-wazuh-restart
+```
+
+***Hướng dẫn cấu hình postfix mail relay***
+
+```
+relayhost = [smtp.gmail.com]:587
+smtp_sasl_auth_enable = yes
+smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+smtp_sasl_security_options
+smtp_tls_CAfile = /etc/ssl/certs/ca-bundle.crt
+smtp_use_tls = yes
+```
