@@ -26,8 +26,11 @@ Mô hình triển khai:
 ![Screenshot](/images/mohinhtrienkhaiESXi.png)
 
 1. Cài đặt Security Onion
+
 ***Lưu ý:***
+
 ***Trong quá trình cài đặt nếu sử dụng chế độ Standard/Direct thì SO cần phải được kết nối Internet ngay trong khi cài đặt với IP đã cấu hình***
+
 - Tải ISO tại địa chỉ: [https://download.securityonion.net/file/securityonion/securityonion-2.3.130-20220607.iso](https://download.securityonion.net/file/securityonion/securityonion-2.3.130-20220607.iso)
 - Tạo máy ảo mới trên hệ thống VMware Workstation/ESXi sử dụng image đã tải ở trên theo các bước trong tài liệu: https://docs.securityonion.net/en/2.3/vmware.html
 - Khởi động lại máy ảo và cấu hình theo kiến trúc Standalone với địa chỉ IP theo đúng **yêu cầu phần cứng**: https://docs.securityonion.net/en/2.3/first-time-users.html
