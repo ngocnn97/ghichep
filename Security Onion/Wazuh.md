@@ -31,8 +31,10 @@ apt-get install wazuh-agent -y
 ```
 ### Cài đặt Wazuh Agent trên hệ điều hành Windows
 
-- Download package từ source trên trang chủ của SO 
-  
+- Download package từ source trên trang chủ của SO:
+
+![Screenshot](/images/wazuh-agent-windows.png)
+
  - **Cách 1**: Sử dụng cmd để cài đặt:
 ```sh
 wazuh-agent-3.6.1-1.msi /q
@@ -40,7 +42,6 @@ wazuh-agent-3.6.1-1.msi /q
 
  - **Cách 2** : Sử dụng GUI : Double-click vào file dowload và cài đặt với mặc định. Một khi cài đặt xong, agent sẽ có giao diện đồ họa để cấu hình, mở log file hoặc start/stop service :
 
-![Screenshot](/images/wazuh-agent-windows.png)
  
 Mặc định tất cả file agent được đặt tại : `C:\Program Files(x86)\ossec-agent`
 ### Cài đặt Wazuh Agent trên hệ điều hành MacOS
