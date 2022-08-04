@@ -30,9 +30,10 @@ apt-get update -y
 apt-get install wazuh-agent -y
 ```
 ### Cài đặt Wazuh Agent trên hệ điều hành Windows
-- Dowload package từ source : https://documentation.wazuh.com/current/installation-guide/packages-list/index.html
+
+- Download package từ source trên trang chủ của SO 
   
- - **Cách 1**: Sử dụng cmd để cài đặt :
+ - **Cách 1**: Sử dụng cmd để cài đặt:
 ```sh
 wazuh-agent-3.6.1-1.msi /q
 ```
@@ -100,7 +101,15 @@ MDAyIHVzZXIgMTkyLjE2OC4xODkuMTUwIGI4NmJiYzg5MTdiZTVlNjcwMWQ2ZjAxZDhkYTdkMDI5NWM0
 
  - Exit với `Q`
 
-**Trên Agent** : 
+**Trên Agent Windows** : 
+
+- Mở **win32ui.exe** trong thử mục `C:\Program Files(x86)\ossec-agent`
+
+- Nhập Địa chỉ IP Server và Key tương ứng
+
+- Start Agent
+
+**Trên Agent Ubuntu** : 
 
  - Chạy `manage_agents` : 
 ```sh
