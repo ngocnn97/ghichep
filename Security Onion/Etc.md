@@ -6,3 +6,8 @@
 
 `grep -rnw '/opt/so/rules/hids/ruleset/rules/' -e 'Rule_id'`
 
+## Suricata
+
+### Disable rule 
+
+`sudo so-rule disabled add 'Rule_id'`
