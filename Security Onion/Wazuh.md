@@ -141,7 +141,7 @@ MDAyIHVzZXIgMTkyLjE2OC4xODkuMTUwIGI4NmJiYzg5MTdiZTVlNjcwMWQ2ZjAxZDhkYTdkMDI5NWM0
 
 - Start Agent
 
-**Trên Agent Ubuntu** : 
+**Trên Agent Linux/Unix** : 
 
  - Chạy `manage_agents` : 
 ```sh
