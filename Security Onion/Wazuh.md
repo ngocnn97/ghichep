@@ -4,6 +4,7 @@ Wazuh là mội giải pháp HIDS mã nguồn mở, Wazuh khởi đầu từ m�
 
 
 ## Cấu hình Wazuh agent 
+
 ### Cài đặt Wazuh Agent trên hệ điều hành Debian/Ubuntu
 
  - Cài đặt các gói bổ trợ :
@@ -30,6 +31,33 @@ apt-get update -y
 ```sh
 apt-get install wazuh-agent -y
 ```
+
+### Cài đặt Wazuh Agent trên hệ điều hành CentOS
+
+Thêm khóa :
+
+```sh
+rpm --import https://packages.wazuh.com/key/GPG-KEY-WAZUH
+```
+ - Cài Wazuh repo  :
+
+```sh
+cat > /etc/yum.repos.d/wazuh.repo << EOF
+[wazuh]
+gpgcheck=1
+gpgkey=https://packages.wazuh.com/key/GPG-KEY-WAZUH
+enabled=1
+name=EL-\$releasever - Wazuh
+baseurl=https://packages.wazuh.com/4.x/yum/
+protect=1
+EOF
+```
+
+ - Install Wazuh agent
+```sh
+yum install wazuh-agent
+```
+
 ### Cài đặt Wazuh Agent trên hệ điều hành Windows
 
 - Download package từ source trên trang chủ của SO:
