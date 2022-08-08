@@ -89,7 +89,7 @@ Trong phần này sẽ hướng dẫn cách register để giám sát các agent
 
 - Mở **win32ui.exe** trong thử mục `C:\Program Files(x86)\ossec-agent`
 
-- Nhập Địa chỉ IP Server: 192.168.90.28 và Key tương ứng trong file [VMG: Wazuh Agent key](https://docs.google.com/spreadsheets/d/1Q9SpbvxVlAs49JBKU641jm_1i8vjKqzL3dOcyaThlKY/edit?usp=sharing)
+- Nhập Địa chỉ IP Server: 192.168.90.28 và Key tương ứng trong file [VMG: Wazuh Agent key](https://docs.google.com/spreadsheets/d/1Q9SpbvxVlAs49JBKU641jm_1i8vjKqzL3dOcyaThlKY/edit?usp=sharing) **Lưu ý: Name đúng với tên server thì mới chọn y, sai thì chọn n**:
 
 - Start Agent
 
@@ -108,7 +108,7 @@ Trong phần này sẽ hướng dẫn cách register để giám sát các agent
 Choose your action: I or Q:
 ```
 
- - Chọn `I` để import key, paste key tương ứng trong file [VMG: Wazuh Agent key](https://docs.google.com/spreadsheets/d/1Q9SpbvxVlAs49JBKU641jm_1i8vjKqzL3dOcyaThlKY/edit?usp=sharing) : 
+ - Chọn `I` để import key, paste key tương ứng trong file [VMG: Wazuh Agent key](https://docs.google.com/spreadsheets/d/1Q9SpbvxVlAs49JBKU641jm_1i8vjKqzL3dOcyaThlKY/edit?usp=sharing) **Lưu ý: Name đúng với tên server thì mới chọn y, sai thì chọn n** : 
 ```sh
 Choose your action: I or Q: I
 
