@@ -91,7 +91,7 @@ Trong phần này sẽ hướng dẫn cách register để giám sát các agent
 
 - Nhập Địa chỉ IP Server: 192.168.90.28 và Key tương ứng trong file [VMG: Wazuh Agent key](https://docs.google.com/spreadsheets/d/1Q9SpbvxVlAs49JBKU641jm_1i8vjKqzL3dOcyaThlKY/edit?usp=sharing) 
 
-*<kbd>Lưu ý:<kbd> Name đúng với tên server thì mới chọn y, sai thì chọn n*:
+<kbd>*Lưu ý: Name đúng với tên server thì mới chọn y, sai thì chọn n*<kbd>
 
 - Start Agent
 
@@ -112,7 +112,7 @@ Choose your action: I or Q:
 
  - Chọn `I` để import key, paste key tương ứng trong file [VMG: Wazuh Agent key](https://docs.google.com/spreadsheets/d/1Q9SpbvxVlAs49JBKU641jm_1i8vjKqzL3dOcyaThlKY/edit?usp=sharing) 
 
- ***Lưu ý: Name đúng với tên server thì mới chọn y, sai thì chọn n***:
+<kbd>*Lưu ý: Name đúng với tên server thì mới chọn y, sai thì chọn n*<kbd>
  
 ```sh
 Choose your action: I or Q: I
