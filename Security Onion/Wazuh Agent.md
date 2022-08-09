@@ -50,7 +50,7 @@ gpgcheck=1
 gpgkey=https://packages.wazuh.com/key/GPG-KEY-WAZUH
 enabled=1
 name=EL-\$releasever - Wazuh
-baseurl=https://packages.wazuh.com/4.x/yum/
+baseurl=https://packages.wazuh.com/3.x/yum/
 protect=1
 EOF
 ```
