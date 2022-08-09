@@ -32,6 +32,11 @@ apt-get update -y
 apt-get install wazuh-agent -y
 ```
 
+- Tắt tự động cập nhật phiên bản:
+```sh
+sed -i "s/^enabled=1/enabled=0/" /etc/yum.repos.d/wazuh.repo
+```
+
 ### Cài đặt Wazuh Agent trên hệ điều hành CentOS
 
 Thêm khóa :
@@ -42,12 +47,12 @@ rpm --import https://packages.wazuh.com/key/GPG-KEY-WAZUH
  - Cài Wazuh repo  :
 
 ```sh
-cat > /etc/yum.repos.d/wazuh.repo << EOF
-[wazuh]
+cat > /etc/yum.repos.d/wazuh.repo <<\EOF
+[wazuh_repo]
 gpgcheck=1
 gpgkey=https://packages.wazuh.com/key/GPG-KEY-WAZUH
 enabled=1
-name=EL-\$releasever - Wazuh
+name=Wazuh repository
 baseurl=https://packages.wazuh.com/3.x/yum/
 protect=1
 EOF
@@ -55,7 +60,12 @@ EOF
 
  - Install Wazuh agent
 ```sh
-yum install wazuh-agent
+yum install wazuh-agent-3.7.2-1
+```
+
+- Tắt tự động cập nhật phiên bản:
+```sh
+sed -i "s/^enabled=1/enabled=0/" /etc/yum.repos.d/wazuh.repo
 ```
 
 ### Cài đặt Wazuh Agent trên hệ điều hành Windows
@@ -75,8 +85,11 @@ wazuh-agent-3.6.1-1.msi /q
 
  
 Mặc định tất cả file agent được đặt tại : `C:\Program Files(x86)\ossec-agent`
+
 ### Cài đặt Wazuh Agent trên hệ điều hành MacOS
-**(todo)*
+**(todo)**
+
+
 ## Đăng ký Agent
 Trong phần này sẽ hướng dẫn cách register để giám sát các agent :
 
