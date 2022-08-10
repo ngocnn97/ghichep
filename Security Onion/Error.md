@@ -5,6 +5,19 @@ Các lỗi xảy ra trong quá trình cài đặt và vận hành tham khảo [G
 Các lỗi có thể xảy ra trong quá trình cài đặt và vận hành security onion
 ## Wazuh
 Các lỗi có thể xảy ra trong quá trình cài đặt và vận hành wazuh trên nền tảng security onion
+
+### Lỗi kết nối wazuh agent
+- ***Mô tả:***
+Lỗi gặp phải khi nhập key và connect wazuh agent với wazuh manager cổng 
+
+- ***Nguyên nhân:***
+Chưa mở luật trên firewall, chưa so-allow, phiên bản không tương thích
+
+- ***Khắc phục:***
+	- Mở luật firewall
+	- So-allow
+	- Phiên bản Wazuh_agent <= Wazuh_manager
+
 ## Postfix
 Các lỗi có thể xảy ra trong quá trình cài đặt và vận hành postfix
 ### Lỗi network is unreachable
