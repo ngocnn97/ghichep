@@ -5,5 +5,6 @@
       - [Error ](https://github.com/ngocnn97/ghichep/blob/main/Security%20Onion/Error.md)
       - [Etc](https://github.com/ngocnn97/ghichep/blob/main/Security%20Onion/Etc.md)
       - [Wazuh Agent](https://github.com/ngocnn97/ghichep/blob/main/Security%20Onion/Wazuh%20Agent.md)
-2.[Ghi chép về Fortigate](https://github.com/ngocnn97/ghichep/tree/main/Fortigate)
+
+2. [Ghi chép về Fortigate](https://github.com/ngocnn97/ghichep/tree/main/Fortigate)
       - [High Availability](https://github.com/ngocnn97/ghichep/blob/main/Fortigate/Config_HA.md)
