@@ -67,6 +67,6 @@ cần monitor. Lúc này, metrics sẽ được phơi bay ở pushgateway, chứ
 
 #Tham khảo: 
 
-[1]- https://github.com/hocchudong/ghichep-prometheus/edit/master/1.Gioi_thieu_Prometheus.md
+[1]- https://github.com/hocchudong
 
 [2]- https://prometheus.io/docs/introduction/overview/
