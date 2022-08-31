@@ -8,3 +8,9 @@
 
 2. [Ghi chép về Fortigate](https://github.com/ngocnn97/ghichep/tree/main/Fortigate)
       - [High Availability](https://github.com/ngocnn97/ghichep/blob/main/Fortigate/Config_HA.md)
+
+3. [Ghi chép về Prometheus](https://github.com/ngocnn97/ghichep/tree/main/Prometheus)
+      - [Prometheus](https://github.com/ngocnn97/ghichep/blob/main/Prometheus/Prometheus.md)
+      - [Keepalived Exporter](https://github.com/ngocnn97/ghichep/blob/main/Prometheus/Keepalived_exporter.md)
+      - [Windows Exporter](https://github.com/ngocnn97/ghichep/blob/main/Prometheus/Windows_exporter.md)
+      - [Nvidia GPU Exporter](https://github.com/ngocnn97/ghichep/blob/main/Prometheus/Windows_exporter.md)
