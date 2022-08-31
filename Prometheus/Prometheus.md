@@ -10,8 +10,8 @@
 
 **Prometheus** có khả năng thu thập các thông số/số liệu (**metric**) từ các mục tiêu được cấu hình theo các khoảng thời gian nhất định, đánh giá các biểu thức quy tắc, hiển thị và kích hoạt các cảnh báo nếu một số điều kiện thỏa mãn yêu cầu. 
 
-<u> Một số tính năng của Prometheus </u>
-- Mô hình dữ liệud da chiều
+### Một số tính năng của Prometheus
+- Mô hình dữ liệu  chiều
 - Ngôn ngữ truy vấn linh hoạt
 - Hỗ trợ nhiều chế độ biểu đồ
 - Nhiều chương trình tích hợp và hỗ trợ bên thứ 3
