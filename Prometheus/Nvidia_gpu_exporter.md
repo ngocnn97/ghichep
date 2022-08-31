@@ -98,7 +98,7 @@ scrape_configs:
   - job_name: “nvidia_gpu_exporter”
     scrape_interval: 10s
     static_configs:
-     - targets: [‘IP-client-linux:9835]
+     - targets: [IP-client-linux:9835]
 ```
 
 |Tham số |Ý nghĩa |
