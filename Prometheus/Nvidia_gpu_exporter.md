@@ -69,13 +69,13 @@ WantedBy=multi-user.target
 
 ### Mở firewall
 	
-	- Iptables:
+- Iptables:
 
 	`echo -e '-A INPUT  -p tcp -m tcp --dport 9835 -j ACCEPT' >> /etc/sysconfig/iptables`
 
 	`systemctl reload iptables`
 
-	- Firewalld:
+- Firewalld:
 
 	`echo -e '<port protocol="tcp" port="9835"/>' >>/etc/firewalld/zones/vmg.xml`
 
