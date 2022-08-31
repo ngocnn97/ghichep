@@ -9,7 +9,6 @@
 ```sh
 git clone --depth 1 https://github.com/cafebazaar/keepalived-exporter.git
 ```
-
 - Cài đặt
 
 `cd keepalived-exporter`
