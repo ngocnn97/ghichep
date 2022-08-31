@@ -102,6 +102,7 @@ scrape_configs:
 ```
 
 |Tham số |Ý nghĩa |
+|--------|--------|
 |job_name|Tên của job|
 |scrape_interval|Thời gian nghỉ giữa 2 lần scrape|
 |targets|Thông tin ip client : cổng|
