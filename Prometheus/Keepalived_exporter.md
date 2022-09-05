@@ -73,8 +73,9 @@ WantedBy=multi-user.target
 	`systemctl reload iptables`
 
 - Firewalld:
+	
+	Thêm dòng `<port port="9165" protocol="tcp"/>` vào file tương ứng tại `/etc/firewalld/zones/`
 
-	`echo -e '<port protocol="tcp" port="9165"/>' >>/etc/firewalld/zones/vmg.xml`
 
 	`firewall-cmd --reload`
 
