@@ -29,12 +29,12 @@ After=network-online.target
 [Service]
 Type=simple
 
-User=keepalived_exporter
-Group=keepalived_exporter
+User=keepalived-exporter
+Group=keepalived-exporter
 
-ExecStart=/usr/local/bin/keepalived_exporter
+ExecStart=/usr/local/bin/keepalived-exporter
 
-SyslogIdentifier=keepalived_exporter
+SyslogIdentifier=keepalived-exporter
 
 Restart=always
 RestartSec=1
