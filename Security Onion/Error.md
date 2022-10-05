@@ -55,3 +55,25 @@ Cấu hình sai thông tin gửi mail
 
 - ***Khắc phục:***
 Cấu hình chuẩn IP, username,.. trong file `/opt/so/conf/wazuh/ossec.conf`
+
+### Lỗi khi gửi mail với reply mail server (Postfix error: Host or domain name not found)
+
+- ***Mô tả:***
+
+Đã có kết nối internet nhưng Postfix vẫn thông báo là không thể phân giải được domain
+
+- ***Nguyên nhân:***
+
+Là 1 bug của postfix khi sao chép /etc/resolv.copf quá sớm dẫn tới postfix bị lỗi khi phân giải địa domain
+
+- ***Khắc phục:***
+
+Sau khi khởi động lại tiến hành copy lại file /etc/resolv.copf vào phần cấu hình của postfix:
+
+```sh
+sudo cp /etc/resolv.conf /var/spool/postfix/
+```
+
+```sh
+service postfix restart
+```
